@@ -18,7 +18,8 @@ class Gallery extends Component {
 
       loadPhoto = () => {
         const  {gallerys} = this.state;
-        const url = `https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=5b624c36c0b20298284e08356032e34d&group_id=1577604%40N20&per_page=20&page=2&format=json&nojsoncallback=1&api_sig=f4d8867f75cc895fee0c064762e6ef16`
+        // const url = `https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=410e09f6c1e4f189dd8e8d6144031dcb&group_id=1577604%40N20&per_page=20&page=5&format=json&nojsoncallback=1&api_sig=4c1450ae1480d059824e19a9a425db64`
+        const url = `https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=a90ef26cfa2329b4f9251bea4794b17e&group_id=${this.props.nsid}&per_page=&page=&format=json&nojsoncallback=1&api_sig=c81ba0c8f484448d9c913e7708787a73`
         axios.get(url)
           .then(response => {
             // console.log(response);
